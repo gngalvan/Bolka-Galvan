@@ -1,0 +1,44 @@
+@import "../components/mixins";
+
+/* estilos generales */
+body{
+    font-family: 'Poppins', sans-serif;
+}
+main{
+    img{
+        width: 100%;
+    }
+    h1{
+        @include flexCenter;
+        font-weight: bold;
+    }
+    h2{
+        @include flexCenter;
+    }
+    .subtitulo{
+        @include flexCenter;
+    }
+    padding-top: 40px;
+}
+
+/* textos */
+.categoria{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    font-size: map-get($map: $texto-descripcion, $key: size-descripcion);
+    color: map-get($map: $texto-descripcion, $key: color-descripcion);  
+    margin-top: 10px;
+    padding-left: 5px;
+}
+.descripcion{
+    font-size: 14px;
+    margin-top: -10px;
+    padding-left: 5px;
+}
+.precio{
+    font-size: map-get($map: $texto-precio, $key: size-precio);
+    font-weight: map-get($map: $texto-precio, $key: peso-precio);
+    padding-left: 5px;
+}
+

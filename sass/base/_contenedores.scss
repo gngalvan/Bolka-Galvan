@@ -1,0 +1,184 @@
+/* banner informativo */
+.bannerInformativo{
+    background-color: $color-principal;
+    display: flex;
+    justify-content: center;
+    .containerItems{
+        display: flex;
+        justify-content: space-around;
+        color: $color-secundario;
+        width: 86%;
+        height: 230px;
+        gap: 5px;
+        .item{
+            display: flex;
+            align-items: center;
+            img{
+                width: 30%;
+            }
+            .texto{
+                display: flex;
+                flex-direction: column;
+                margin-left: 10px;
+                width: 55%;
+                h3{
+                    font-size: 1.2em;
+                    font-weight: bold;
+                }
+                p{
+                    font-size: 00.9em;
+                }
+            }
+        }
+    }
+}
+
+/* contenedor ofertas */
+.containerOfertas{
+    display: grid;
+    margin: 7%;
+    margin-top: 5%;
+    grid-template-areas:    'h1 h1 h1 h1'
+                            'banner1 banner1 banner2 banner2'
+                            'h2 h2 h2 h2'
+                            'p p p p';
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    h1{
+        grid-area: h1;
+        text-align: center;
+    }
+    .banner1{
+        grid-area: banner1;
+    }
+    .banner2{
+        grid-area: banner2;
+    }
+    h2{
+        grid-area: h2;
+        display: flex;
+        padding-top: 25px;
+    }
+    p{
+        grid-area: p;
+        text-align: center
+    }
+    .cardOfertas{
+        @include card;
+        padding-bottom: 5px;
+        img{
+            @extend %efecto;
+        }
+        p{
+            padding-left: 5px;
+            padding-top: 5px;
+        }
+    }
+}  
+  
+/* contenedor cards */
+h1{
+    padding-top: 50px;   
+}
+.containerDestacados{
+    display: flex;
+    justify-content: center;
+    .contenedorCards{
+        display: grid;
+        width: 86%;
+        margin-top: 20px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 30px;
+        justify-content: center;
+        .cardInicio {
+           @include card;
+           img{
+            @extend %efecto;
+           }
+        }
+    }
+}
+
+
+
+
+
+
+.containerVerMas{
+    @include flexCenter;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    text-decoration: none; 
+}
+  
+/* contenedor de otros productos inicio */
+.contenedorOtros{
+    .contenedorCardsOtros{
+        display: grid;
+        margin-top: 50px;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        .otros{
+            width: 95%;
+            transition: transform .2s;
+            margin: 0 auto;
+            &:hover{
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+
+  
+  
+/* container contacto */
+.containerContactos{
+    .col-md-5{
+        h1{
+            display: flex;
+            justify-content: start;
+            font-size: 22px;
+        }
+        h2{
+            display: flex;
+            justify-content: start;
+            font-size: 22px;
+            font-weight: bold;
+            padding-top: 50px;
+        }
+        .form-group{
+            h4{
+                font-size: 1em;
+            }
+        }
+        p{
+            span{
+                font-weight: bold;
+            }
+        } 
+    }     
+}
+
+
+
+
+
+/* container productos */
+.productos{
+    h1{
+    @include flexCenter;
+    margin-bottom: 10px;
+    }
+    .row{
+        .card{
+            @include card;
+            img{
+                @extend %efecto;
+            }
+        }
+    }
+}
+
+
+  

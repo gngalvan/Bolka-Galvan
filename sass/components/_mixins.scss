@@ -1,0 +1,14 @@
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+}
+@mixin card{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border: none;
+    img{
+        border-radius: 5%;
+    }
+}
